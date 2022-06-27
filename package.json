@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "publish:yalc": "turbo run publish-yalc",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@beaumontjonathan/eslint-config-custom": "*",
+    "@types/jest": "^28.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "aws-sdk": "^2.1158.0",
+    "esbuild": "^0.14.46",
+    "eslint": "^8.2.0",
+    "jest": "^28.1.1",
+    "prettier": "latest",
+    "ts-jest": "^28.0.5",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.10"
+}

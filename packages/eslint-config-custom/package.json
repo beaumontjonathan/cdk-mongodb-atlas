@@ -1,0 +1,17 @@
+{
+  "name": "@beaumontjonathan/eslint-config-custom",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint index.js"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

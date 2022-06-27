@@ -1,0 +1,9 @@
+{
+  "name": "@beaumontjonathan/cdk-mongodb-atlas-tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "simple.json"
+  ]
+}

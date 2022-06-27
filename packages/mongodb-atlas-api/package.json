@@ -1,0 +1,21 @@
+{
+  "name": "@beaumontjonathan/mongodb-atlas-api",
+  "version": "0.0.0",
+  "main": "./build",
+  "types": "./build",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "publish-yalc": "yalc publish",
+    "lint": "eslint src/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/urllib": "^2.33.0",
+    "eslint": "^7.32.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "urllib": "^2.38.0"
+  }
+}

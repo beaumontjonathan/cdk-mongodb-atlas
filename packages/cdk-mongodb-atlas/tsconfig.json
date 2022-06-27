@@ -1,0 +1,8 @@
+{
+  "extends": "@beaumontjonathan/cdk-mongodb-atlas-tsconfig/simple.json",
+  "compilerOptions": {
+    "outDir": "build"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}
