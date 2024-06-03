@@ -1,77 +1,27 @@
-# Turborepo starter
+> Deprecated, please see [`awscdk-resources-mongodbatlas`](https://github.com/mongodb/awscdk-resources-mongodbatlas).
 
-This is an official Yarn v1 starter turborepo.
+# CDK MongoDB Atlas
 
-## What's inside?
+A[n unfinished] set of CDK Custom Resources to manage constructs in MongoDB Atlas.
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+## Background
 
-### Apps and Packages
+[CDK](https://aws.amazon.com/cdk/) helps managing cloud resources in AWS CloudFormation. The [`aws-cdk`](https://www.npmjs.com/package/aws-cdk) includes a large number of [constructs](https://www.npmjs.com/package/constructs) for resources relating to services within AWS, but also supports creating _custom resources_.
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+CloudFormation [Custom Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) allow AWS customers to write custom provisioning logic, allowing the management of non-AWS native resources.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## MongoDB Atlas
 
-### Utilities
+MongoDB Atlas is a managed database service in both dedicated servers & serverless NoSQL variants.
 
-This turborepo has some additional tools already setup for you:
+A neat feature is supporting authentication through AWS IAM Users & Roles.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## CDK MongoDB Atlas
 
-## Setup
+The aim of this personal project was to learn about _Custom Resources_ by building a provisioning wrapper around various MongoDB Atlas resources, e.g., users/roles, databases, indexes.
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+### Project Status
 
-### Build
+During mid-2022 I was using MongoDB for various work & hobby projects, but wanted to keep my IaC in CDK. This was a fun way to learn about CloudFormation, CDK, and Atlas.
 
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+In 2023 I moved onto other projects & subsequently MongoDB [released their own](https://constructs.dev/packages/awscdk-resources-mongodbatlas/v/3.5.2?lang=typescript) _CDK Third-Party Extension_ in collaboration with AWS ([AWS DevOps blog](https://aws.amazon.com/blogs/devops/extending-cloudformation-and-cdk-with-third-party-extensions/)).
